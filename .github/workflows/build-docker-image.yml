@@ -31,10 +31,10 @@ jobs:
       # Step 4: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t deepak-206/cloud-native-application:${{ github.sha }} .
+          docker build -t deepakprasadgupta/cloud-native-application:${{ github.sha }} .
 
       # Step 5: Push the Docker image (only on main branch)
       - name: Push Docker image
         if: github.ref == 'refs/heads/main'
         run: |
-          docker push deepak-206/cloud-native-application:${{ github.sha }}
+          docker push deepakprasadgupta/cloud-native-application:${{ github.sha }}
